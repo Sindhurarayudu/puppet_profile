@@ -4,4 +4,8 @@ class profile::base(
  '1.ubuntu.pool.ntp.org',
  ],
 ) {
+    class { '::ntp':
+    servers => $ntp_servers,
+
+ }
 }
